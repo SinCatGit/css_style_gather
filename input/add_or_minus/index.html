@@ -1,0 +1,35 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="minus_add_input_group">
+    <span class="add_or_minus_btn" onclick="minusOne('id_zaiwai_wugong')">-</span>
+    <input type="text" readonly name="zaiwai_wugong" id="id_zaiwai_wugong" value="0" class="minus_add_input">
+    <label style="height: 28px; border-width:0px;">人</label>
+    <span class="add_or_minus_btn" onclick="addOne('id_zaiwai_wugong')">+</span>
+</div>
+</body>
+<script>
+    var addOne = function(tag_id){
+        console.log(tag_id+'add');
+        var input_tag=document.getElementById(tag_id);
+        if(input_tag.value < 20){
+            input_tag.value++;
+        }
+    };
+
+    var minusOne = function(tag_id){
+        console.log(tag_id+'minus');
+        var input_tag=document.getElementById(tag_id);
+        if(input_tag.value > 0){
+            input_tag.value--;
+        }
+    };
+</script>
+</html>

@@ -1,0 +1,22 @@
+.minus_add_input_group{
+    border: 1px solid #339967;
+    border-radius: 4px;
+    height: 30px;
+    width: 110px;
+}
+
+.minus_add_input_group .add_or_minus_btn{
+    padding:4px 12px;
+    border-radius:4px;
+    border:1px solid #339967;
+    background-color: #339967;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+.minus_add_input_group .minus_add_input{
+    font-size:15px;
+    width:15px;
+    height:28px;
+    border-width:0px;
+    color: #666666;
+}
