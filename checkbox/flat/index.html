@@ -1,101 +1,8 @@
 <html>
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js">
-    </script>
-    <style>
-        ul{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        .profile_radio li{
-            width:92px;
-            height:50px;
-            border-radius:3px;
-            color:#777;
-            font-size:14px;
-            text-align:center;
-            line-height:42px;
-            cursor:pointer;
-            border:1px solid #f1f1f1;
-            background:#fff;
-            float:left;
-            margin-right:20px;
-            position:relative
-        }
-
-        .profile_radio li input{
-            width:92px;
-            height:50px;
-            position:absolute;
-            left:-2px;
-            top:-2px;
-            filter:alpha(opacity=0);
-            -moz-opacity:0;
-            opacity:0;
-            margin:0
-        }
-
-        .profile_radio li:hover{
-            border:1px solid #c8e6de
-        }
-        .profile_radio li.current{
-            border-color:#00b38a;color:#00b38a
-        }
-        .profile_radio li.current em{
-            width:21px;
-            height:21px;
-            background:url(./img/radio_checked.png) no-repeat;
-            position:absolute;
-            right:0;
-            bottom:0
-        }
-        .clear{
-            clear: both;
-        }
-        /*重新组合的样式*/
-        div.radio-group-mobile-grass:hover{
-            border:1px solid #c8e6de;
-        }
-
-        .radio-group-mobile-grass{
-            width:90px;
-            height:50px;
-            border-radius:3px;
-            color:#777;
-            font-size:14px;
-            text-align:center;
-            line-height:42px;
-            cursor:pointer;
-            border:1px solid #f1f1f1;
-            background:#fff;
-            float:left;
-            margin-right:20px;
-            position:relative
-        }
-        .radio-group-mobile-grass input{
-            width:92px;
-            height:52px;
-            position:absolute;
-            left:-2px;
-            top:-2px;
-            filter:alpha(opacity=0);
-            -moz-opacity:0;
-            opacity:0;
-            margin:0
-        }
-
-        .radio-group-mobile-grass input:checked + em{
-            width:21px;
-            height:21px;
-            background:url(./img/radio_checked.png) no-repeat;
-            position:absolute;
-            right:0;
-            bottom:0
-        }
-
-
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <script type="application/javascript" src="js/main.js"></script>
 </head>
 <body>
 <div>
@@ -153,26 +60,4 @@
     <em></em>
 </div>
 </body>
-
-<script>
-var countChecked = function() {
-  var n = $( "input:checked" ).length;
-    console.log(n);
-    $("input").parent('div').removeClass('radio-group-mobile-grass-current');
-    $("input:checked").parent('div').addClass('radio-group-mobile-grass-current');
-};
-countChecked();
-
-$(".radio-group-mobile-grass input").on( "click", countChecked );
-
-var count_li_input_Checked = function() {
-  var n = $( "input:checked" ).length;
-    console.log(n);
-    $("input").parent('li').removeClass('current');
-    $("input:checked").parent('li').addClass('current');
-};
-count_li_input_Checked();
-
-$( ".profile_radio input" ).on( "click", count_li_input_Checked );
-</script>
 </html>
